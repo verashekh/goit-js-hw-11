@@ -8,22 +8,21 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <form class="search-form">
-      <label>
-        <input
-          type="text"
-          name="search"
-          placeholder="Search images..."
-          required
-        />
-      </label>
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+        required
+      />
       <button type="submit">Search</button>
     </form>
-    <!-- Loader -->
+
     <div class="loader is-hidden"></div>
 
-    <!-- Gallery -->
     <ul class="gallery"></ul>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>

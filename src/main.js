@@ -11,10 +11,10 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 const form = document.querySelector('.search-form');
 
-form.addEventListener('submit', async event => {
+form.addEventListener('submit', event => {
   event.preventDefault();
 
-  const query = form.elements.search.value.trim();
+  const query = form.elements.searchQuery.value.trim();
 
   if (!query) {
     iziToast.warning({

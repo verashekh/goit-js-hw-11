@@ -14,14 +14,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.loader {
-  margin: 20px auto;
-  text-align: center;
-}
-
-.loader.is-hidden {
-  display: none;
-}
 input {
   display: flex;
   align-items: flex-start;
@@ -66,13 +58,51 @@ button {
 button:hover {
   background: #6c8cff;
 }
-.search-form {
+.form {
   display: flex;
   gap: 8px;
   align-items: center;
   justify-content: center;
   margin-top: 36px;
 }
+.loader {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 24px auto;
+
+  border-radius: 50%;
+  border: 3px solid #4e75ff;
+  border-right-color: transparent;
+
+  animation: spin 1s linear infinite;
+}
+
+.loader.is-hidden {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-text {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 16px;
+  color: #2e2f42;
+}
+
+.loader-text.is-hidden {
+  display: none;
+}
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
